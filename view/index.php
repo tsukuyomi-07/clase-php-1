@@ -1,6 +1,6 @@
 <?php
-include"../conexion.php";
-$consulta = $conexion->query("SELECT * FROM users")
+include "../conexion.php";
+$consulta = $conexion->query("SELECT * FROM users");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +12,9 @@ $consulta = $conexion->query("SELECT * FROM users")
 <body>
     
 <h1>Lista de usuarios</h1>
+
+<button><a href="form-registro.php">Registarse</a></button>
+<br><br>
 
 <table border="1">
     <thead>
@@ -26,10 +29,10 @@ $consulta = $conexion->query("SELECT * FROM users")
     ?>
 
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td><?= $user->names ?></td>
+        <td><?= $user->Document ?></td>
+        <td> Editar </td>
+        <td> Eliminar </td>
     </tr>
     <?php 
     endwhile;
