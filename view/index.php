@@ -30,7 +30,7 @@ $consulta = $conexion->query("SELECT * FROM users");
 
     <tr>
         <td><?= $user->names ?></td>
-        <td><?= $user->Document ?></td>
+        <td><?= $user->document ?></td>
         <td> Editar </td>
         <td> Eliminar </td>
     </tr>

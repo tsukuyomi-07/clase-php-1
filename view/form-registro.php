@@ -17,7 +17,8 @@
 
         <label>Ingrese su Documento</label>
         <input type="number" name="document" >
+        <button type="submit">Guardar</button>
     </form>
-    <button type="submit">Guardar</button>
+    
 </body>
 </html>
