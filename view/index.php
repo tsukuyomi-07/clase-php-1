@@ -39,6 +39,6 @@ $consulta = $conexion->query("SELECT * FROM users");
     ?>
     </tbody>
 </table>
-<h1></h1>
+<label for=""></label>
 </body>
 </html>
