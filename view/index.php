@@ -8,8 +8,12 @@ $consulta = $conexion->query("SELECT * FROM users");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Document</title>
-    
+    <style>
+        label,input{display: block;}
+        a{color: black; text-decoration: none;}
+    </style>
 </head>
 
 <body>
@@ -43,8 +47,18 @@ $consulta = $conexion->query("SELECT * FROM users");
                 <tr>
                     <td><?= $user->names ?></td>
                     <td><?= $user->document ?></td>
-                    <td> Editar </td>
-                    <td> Eliminar </td>
+                    <td> 
+                        <form action="../modelo/actualizar.php" method="post">
+                        <input type="hidden" name="id" value="<?=$user->id?>" >
+                        <button name="actualizar" type="submit">Actualizar</button>
+                        </form>
+                    </td>
+                    <td>                    
+                        <form action="../modelo/crud.php" method="post">
+                            <input type="hidden" name="id" value="<?=$user->id?>" >
+                            <button  type="submit">Eliminar</button>
+                        </form>
+                    </td>
                 </tr>
             <?php
             endwhile;

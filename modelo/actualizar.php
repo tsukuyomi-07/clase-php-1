@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
     <style>
         label,input{display: block;}
         a{color: black; text-decoration: none;}
     </style>
 </head>
 <body>
-    <h1>Registar usuario</h1>
+<h1>Actualizar usuario</h1>
     <button><a href="index.php" >Regresar</a></button>
     <form action="../modelo/crud.php" method="post">
         <label>Ingrese sus Nombres</label>
