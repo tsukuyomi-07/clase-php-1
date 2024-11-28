@@ -13,10 +13,10 @@
 <h1>Actualizar usuario</h1>
     <button><a href="index.php" >Regresar</a></button>
     <form action="../modelo/crud.php" method="post">
-        <label>Ingrese sus Nombres</label>
-        <input type="text" name="names" >
+        <label>actualice su Nombres</label>
+        <input type="text" name="names"  value="<?= $user->$_POST['names']?>">
 
-        <label>Ingrese su Documento</label>
+        <label>actualice su Documento</label>
         <input type="number" name="document" >
         <button name="registrar" type="submit">Guardar registro</button>
     </form>
