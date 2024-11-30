@@ -11,7 +11,7 @@ $conexion->query("INSERT INTO users VALUES(
 )");
 }
 else{
-    $conexion->query("DELETE FROM users WHERE id = '$_POST[id]'");
+    $conexion->query("DELETE FROM users WHERE id= '$_POST[idDElete]'");
 }
 
 header('location:../view/index.php');

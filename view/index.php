@@ -49,13 +49,13 @@ $consulta = $conexion->query("SELECT * FROM users");
                     <td><?= $user->document ?></td>
                     <td> 
                         <form action="../modelo/actualizar.php" method="post">
-                        <input type="hidden" name="id" value="<?=$user->id?>" >
+                        <input type="hidden" name="idUpdate" value="<?=$user->id?>" >
                         <button name="actualizar" type="submit">Actualizar</button>
                         </form>
                     </td>
                     <td>                    
                         <form action="../modelo/crud.php" method="post">
-                            <input type="hidden" name="id" value="<?=$user->id?>" >
+                            <input type="hidden" name="idDElete" value="<?=$user->id?>" >
                             <button  type="submit">Eliminar</button>
                         </form>
                     </td>

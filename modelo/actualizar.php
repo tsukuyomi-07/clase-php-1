@@ -1,3 +1,7 @@
+<?php 
+include "../conexion.php";
+include "crud.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,16 +14,29 @@
     </style>
 </head>
 <body>
-<h1>Actualizar usuario</h1>
+
+<?php
+
+  $actaulizacion = $conexion->query(("SELECT * FROM users
+                        where id='$_REQUEST[idUpdate]'")); 
+                        echo $actaulizacion->fetch_object();
+                        ?>
+
+    
+
+
+
+
+<!-- <h1>Actualizar usuario</h1>
     <button><a href="index.php" >Regresar</a></button>
     <form action="../modelo/crud.php" method="post">
         <label>actualice su Nombres</label>
-        <input type="text" name="names"  value="<?= $user->$_POST['names']?>">
+        <input type="text" name="names"  value="">
 
         <label>actualice su Documento</label>
-        <input type="number" name="document" >
+        <input type="number" name="document" value="">
         <button name="registrar" type="submit">Guardar registro</button>
-    </form>
+    </form> -->
     
 </body>
 </html>
