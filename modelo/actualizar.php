@@ -22,6 +22,8 @@ include "crud.php";
                         echo $actaulizacion->fetch_object();
                         ?>
 
+                        sebas 
+
     
 
 
