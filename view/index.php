@@ -48,7 +48,7 @@ $consulta = $conexion->query("SELECT * FROM users");
                     <td><?= $user->names ?></td>
                     <td><?= $user->document ?></td>
                     <td> 
-                        <form action="../modelo/actualizar.php" method="post">
+                        <form action="../modelo/actualizarForm.php" method="post">
                         <input type="hidden" name="idUpdate" value="<?=$user->id?>" >
                         <button name="actualizar" type="submit">Actualizar</button>
                         </form>
