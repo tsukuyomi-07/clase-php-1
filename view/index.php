@@ -65,7 +65,7 @@ $consulta = $conexion->query("SELECT * FROM users");
             ?>
         </tbody>
     </table>
-
+sebas 
 </body>
 
 </html>
