@@ -5,13 +5,15 @@ include "../conexion.php";
 
 if(isset($_POST['botonActualizar'])){
     $conexion->query("UPDATE users
-    set names ='$_REQUEST[UpdateNames]' 
-  where names = '$_REQUEST[namesold]'");
+    set 
+    names ='$_REQUEST[names]' ,
+    lastNames ='$_REQUEST[lastNames]',
+    phone = '$_REQUEST[phone]',
+    email = '$_REQUEST[email]'
+  where id = '$_REQUEST[userId]'");
 
 
-    $conexion->query("UPDATE users
-    set document ='$_REQUEST[Updatedocument]' 
-  where document = '$_REQUEST[documentold]'");
+   
 
 header('location:../view/index.php'); 
         
