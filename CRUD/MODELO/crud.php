@@ -2,14 +2,15 @@
 
 include "../conexion.php";
 
-$nombres = $_POST['names'];
-$apellidos = $_POST['lastnames'];
-$telefono = $_POST['phone'];
-$correo = $_POST['email'];
-$documento = $_POST['document'];
+$names = $_POST['names'];
+$lastnames = $_POST['lastnames'];
+$document = $_POST['document'];
+$phone = $_POST['phone'];
+$email = $_POST['email'];
 
-$insert = $conexion->query("INSERT INTO users VALUES (NULL, '$nombres', '$apellidos', ' $documento','$telefono', '$correo' ) ");
+
+$insert = $conexion->query("INSERT INTO users VALUES (NULL, '$names', '$lastnames', '$phone',  '$email',' $document' ) ");
 
 if($insert){
     header("location:../VIEW/listar.php");
-}
+}?>

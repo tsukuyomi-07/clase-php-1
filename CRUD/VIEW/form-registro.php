@@ -13,19 +13,19 @@
     <a href="listar.php">Lista de usuarios</a>
     <form action="../MODELO/crud.php" method="post">
 
-        <label for="">Nombres</label>
+        <label >Nombres</label>
         <input type="text" name="names">
 
-        <label for="">Apellidos</label>
+        <label >Apellidos</label>
         <input type="text" name="lastnames">
 
-        <label for="document">Documento</label>
+        <label >Documento</label>
         <input type="text" name="document" id="document">
 
-        <label for="phone">Telefono</label>
+        <label >Telefono</label>
         <input type="text" name="phone" id="phone">
 
-        <label for="email">Email</label>
+        <label >Email</label>
         <input type="email" name="email" id="email">
 
         <button type="submit">Registrar</button>

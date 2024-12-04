@@ -35,9 +35,9 @@ $consulta = $conexion->query("SELECT * FROM users");
                 <tr>
                     <td> <?=$user['names'];?> </td>
                     <td> <?=$user['lastnames'];?> </td>
-                    <td> <?=$user['document']?> </td>
-                    <td> <?=$user['phone']?> </td>
-                    <td> <?=$user['email']?> </td>
+                    <td> <?=$user['document'];?> </td>
+                    <td> <?=$user['phone'];?> </td>
+                    <td> <?=$user['email'];?> </td>
 
                     <td>
                     <form action="show.php" method="get">

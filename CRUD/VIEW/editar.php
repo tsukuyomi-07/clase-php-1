@@ -15,20 +15,20 @@ $user = $conexion->query("SELECT * FROM users WHERE id=$_REQUEST[user_id] ")->fe
     <a href="listar.php">Regresar</a>
 
     <form action="../MODELO/update.php" method="post">
-        <label for="name">Nombres</label>
-        <input type="text" name="names" id="name" value="<?=$user->names?>">
+        <label >Nombres</label>
+        <input type="text" name="names" id="name" value="<?=$user->$names?>">
 
-        <label for="lastname">Apellidos</label>
-        <input type="text" name="lastnames" id="lastname" value="<?=$user->lastnames?>" >
+        <label >Apellidos</label>
+        <input type="text" name="lastnames" id="lastname" value="<?=$user->$lastnames?>" >
         
-        <label for="document">Documento</label>
-        <input type="text" name="document" id="document">
+        <label >Documento</label>
+        <input type="text" name="document" id="document" value="<?=$user->$document?>">
 
-        <label for="phone">Telefono</label>
-        <input type="text" name="phone" id="phone">
+        <label >Telefono</label>
+        <input type="text" name="phone" id="phone" value="<?=$user->$phone?>">
 
-        <label for="email">Correo</label>
-        <input type="email" name="email" id="imail">
+        <label >Correo</label>
+        <input type="email" name="email" id="email" value="<?=$user->$email?>">
 
         <button type="submit">Actualizar</button>
     </form>
