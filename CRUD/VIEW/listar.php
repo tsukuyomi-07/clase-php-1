@@ -22,36 +22,44 @@ $consulta = $conexion->query("SELECT * FROM users");
             <th>Documento</th>
             <th>Telefono</th>
             <th>email</th>
+            <th>ver</th>
             <th>Editar</th>
             <th>eliminar</th>
         </thead>
         <tbody>
             <?php  
             //while($user = $consulta->fetch_object()):  
-                foreach ($consulta as $user )
+                foreach ($consulta as $user ):
             ?>
 
                 <tr>
-                    <td> <?=$user->names;?> </td>
-                    <td> <?=$user->lastnames;?> </td>
-                    <td> <?=$user->document;?> </td>
-                    <td> <?=$user->phone;?> </td>
-                    <td> <?=$user->email;?> </td>
+                    <td> <?=$user['names'];?> </td>
+                    <td> <?=$user['lastnames'];?> </td>
+                    <td> <?=$user['document']?> </td>
+                    <td> <?=$user['phone']?> </td>
+                    <td> <?=$user['email']?> </td>
+
                     <td>
-                        <form action="editar.php" method="get">
-                            <input type="hidden" name="user_id" id="id" value="<?=$user->id?>">
+                    <form action="show.php" method="get">
+                    <input type="hidden" name="user_id" value="<?=$user['id']?>">
+                    <button type="submit">ver</button></form>
+                    </td>
+
+                    <td>
+                    <form action="editar.php" method="get">
+                            <input type="hidden" name="user_id" id="id" value="<?=$user['id']?>">
                             <button type="submit">Editar</button>
                         </form>
                     </td>
                     <td>
                     <form action="../MODELO/eliminar-user.php" method="get">
-                            <input type="hidden" name="user_id" id="id" value="<?=$user->id?>">
+                            <input type="hidden" name="user_id" id="id" value="<?=$user['id']?>">
                             <button type="submit">Eliminar</button>
                         </form>
                     </td>
                 </tr>
 
-            <?php  
+            <?php  endforeach;
             //endwhile; 
             ?>
         </tbody>

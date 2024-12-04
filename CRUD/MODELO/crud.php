@@ -8,7 +8,7 @@ $telefono = $_POST['phone'];
 $correo = $_POST['email'];
 $documento = $_POST['document'];
 
-$insert = $conexion->query("INSERT INTO users VALUES (NULL, '$nombres', '$apellidos', '$telefono', '$correo', $documento ) ");
+$insert = $conexion->query("INSERT INTO users VALUES (NULL, '$nombres', '$apellidos', ' $documento','$telefono', '$correo' ) ");
 
 if($insert){
     header("location:../VIEW/listar.php");
