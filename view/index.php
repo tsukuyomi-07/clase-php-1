@@ -26,6 +26,9 @@ $consulta = $conexion->query("SELECT * FROM users");
     <table border="1">
         <thead>
             <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>email</th>
+            <th>telefono</th>
             <th>Documentos</th>
             <th>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
@@ -45,8 +48,12 @@ $consulta = $conexion->query("SELECT * FROM users");
             ?>
 
                 <tr>
-                    <td><?= $user->names ?></td>
-                    <td><?= $user->document ?></td>
+                    <td><?= $user->names?></td>
+                    <td><?= $user->lastNames?></td>
+                    <td><?= $user->email?></td>
+                    <td><?= $user->phone?></td>
+                    <td><?= $user->document?></td>
+
                     <td> 
                         <form action="../modelo/actualizarForm.php" method="post">
                         <input type="hidden" name="idUpdate" value="<?=$user->id?>" >
@@ -65,7 +72,7 @@ $consulta = $conexion->query("SELECT * FROM users");
             ?>
         </tbody>
     </table>
-sebas 
+ 
 </body>
 
 </html>

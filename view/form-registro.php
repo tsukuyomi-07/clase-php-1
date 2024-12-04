@@ -17,6 +17,15 @@
         <label>Ingrese sus Nombres</label>
         <input type="text" name="names" >
 
+        <label>Ingrese sus Apellidos</label>
+        <input type="text" name="lastNames" >
+
+        <label>Ingrese su Correo</label>
+        <input type="email" name="email" >
+
+        <label>Ingrese su telefono</label>
+        <input type="number" name="phone" >
+
         <label>Ingrese su Documento</label>
         <input type="number" name="document" >
         <button name="registrar" type="submit">Guardar registro</button>
