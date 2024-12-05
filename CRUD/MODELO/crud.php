@@ -9,8 +9,16 @@ $phone = $_POST['phone'];
 $email = $_POST['email'];
 
 
-$insert = $conexion->query("INSERT INTO users VALUES (NULL, '$names', '$lastnames', '$phone',  '$email',' $document' ) ");
+$insert = $conexion->query("INSERT INTO users VALUES (NULL, '$names', '$lastnames', '$phone', '$email', '$document' ) ");
+
+
+
+
 
 if($insert){
     header("location:../VIEW/listar.php");
-}?>
+}
+
+
+
+?>

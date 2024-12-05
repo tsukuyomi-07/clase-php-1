@@ -16,21 +16,23 @@ $user = $conexion->query("SELECT * FROM users WHERE id=$_REQUEST[user_id] ")->fe
 
     <form action="../MODELO/update.php" method="post">
         <label >Nombres</label>
-        <input type="text" name="names" id="name" value="<?=$user->$names?>">
+        <input type="text" name="names" id="name" value="<?=$user->names?>">
 
         <label >Apellidos</label>
-        <input type="text" name="lastnames" id="lastname" value="<?=$user->$lastnames?>" >
+        <input type="text" name="lastnames" id="lastname" value="<?=$user->lastnames?>" >
         
         <label >Documento</label>
-        <input type="text" name="document" id="document" value="<?=$user->$document?>">
+        <input type="text" name="document" id="document" value="<?=$user->document?>" readonly>
 
         <label >Telefono</label>
-        <input type="text" name="phone" id="phone" value="<?=$user->$phone?>">
+        <input type="text" name="phone" id="phone" value="<?=$user->phone?>">
 
         <label >Correo</label>
-        <input type="email" name="email" id="email" value="<?=$user->$email?>">
+        <input type="email" name="email" id="email" value="<?=$user->email?>">
 
-        <button type="submit">Actualizar</button>
+        <input type="hidden" name="user_id" value="<?=$user->id?>">
+
+        <button type="submit" name="botonActualizar">Actualizar</button>
     </form>
 </body>
 </html>
